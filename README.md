@@ -8,6 +8,6 @@ A library to rank, switch windows.
 
 ## TODO
 
-[] Make it standalone
-[] Add GUI
-[] Add good documentation
+* Make it standalone
+* Add GUI
+* Add good documentation
