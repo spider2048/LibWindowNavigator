@@ -5,11 +5,10 @@ project('WindowNavigator2', 'cpp',
 
 cc = meson.get_compiler('cpp')
 
-executable(
-  'windownavigator2',
-  ['src/main.cpp', 'src/window_utils.cpp', 'src/gui.cpp', 'src/utils.cpp'],
+shared_library(
+  'WindowNavigator',
+  ['src/window_utils.cpp', 'src/gui.cpp', 'src/utils.cpp', 'src/search.cpp'],
   include_directories: ['include'],
-  dependencies: [dependency('spdlog'), dependency('rapidfuzz')],
+  dependencies: [dependency('spdlog'), dependency('rapidfuzz'), dependency('sdl2'), dependency('sdl2_ttf')],
   cpp_args: ['/D _CRT_SECURE_NO_WARNINGS'],
-  install : true
 )
